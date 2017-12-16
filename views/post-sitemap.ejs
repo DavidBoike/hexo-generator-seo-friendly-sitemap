@@ -8,7 +8,7 @@
     </url>
 <% data.items.forEach(function(item){ %>
     <url>
-        <loc><%- encodeURLAndEscape(data.urljoin(config.url, item.path)) %></loc>
+        <loc><%- encodeURLAndEscape(data.urljoin(config.url, 'blog', item.slug)) %></loc>
         <lastmod><%= item.updated.toISOString() || item.date.toISOString() %></lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
